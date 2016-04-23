@@ -4,17 +4,17 @@ function! ReactInstall()
 endfunction
 
 function! GenerateComponent(...)
-  execute "!rails generate react:component " . join(a:000, ' ')
+  execute "silent !rails generate react:component " . join(a:000, ' ')
   redraw!
 endfunction
 
 function! GenerateES6Component(...)
-  execute "!rails generate react:component " . join(a:000, ' ') . " --es6"
+  execute "silent !rails generate react:component " . join(a:000, ' ') . " --es6"
   redraw!
 endfunction
 
 function! GenerateCoffeeComponent(...)
-  execute "!rails generate react:component " . join(a:000, ' ') . " --coffee"
+  execute "silent !rails generate react:component " . join(a:000, ' ') . " --coffee"
   redraw!
 endfunction
 
