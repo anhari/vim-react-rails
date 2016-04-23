@@ -3,22 +3,22 @@ function! ReactInstall()
   redraw!
 endfunction
 
-function! GenerateComponent(component)
-  execute "!rails generate react:component " . <args>
+function! GenerateComponent(...)
+  execute "!rails generate react:component " . join(a:000, ' ')
   redraw!
 endfunction
 
-function! GenerateES6Component(component)
-  execute "!rails generate react:component " . <args> . "--es6"
+function! GenerateES6Component(...)
+  execute "!rails generate react:component " . join(a:000, ' ') . " --es6"
   redraw!
 endfunction
 
-function! GenerateCoffeeComponent(component)
-  execute "!rails generate react:component " . <args> . "--es6"
+function! GenerateCoffeeComponent(...)
+  execute "!rails generate react:component " . join(a:000, ' ') . " --coffee"
   redraw!
 endfunction
 
 command! ReactInstall call ReactInstall()
-command! -nargs=+ ReactComponent call s:GenerateComponent(<args>)
-command! -nargs=+ ReactComponentES6 call s:GenerateES6Component(<args>)
-command! -nargs=+ ReactComponentCoffee call s:GenerateCoffeeComponent(<args>)
+command! -nargs=* ReactComponent call GenerateComponent(<f-args>)
+command! -nargs=* ReactComponentES6 call GenerateES6Component(<f-args>)
+command! -nargs=* ReactComponentCoffee call GenerateCoffeeComponent(<f-args>)
