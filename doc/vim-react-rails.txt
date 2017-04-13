@@ -1,0 +1,64 @@
+*vim-react-rails.txt*
+
+Author:  Michael Anhari
+
+                            vim-react-rails
+
+================================================================================
+CONTENTS                                              *vim-react-rails-contents*
+
+      1. About............................ |About|
+      2. Usage ........................... |Usage|
+        2.1  ............................... |RefillAccordionTabsMinimal|
+        2.2  ............................... |RefillAccordionTabs|
+        2.3  ............................... |RefillAccordion|
+        2.4  ............................... |RefillAnimateInfo|
+
+================================================================================
+ABOUT (1)                                                           *About*
+
+vim-react-rails - rails react components, a vim command away!
+
+Vim-react-rails allows you to use the generators provided by the 'react-rails'
+gem[1] via vim commands.
+
+Any bugs or feature requests can be entered at the github repo[2] for
+vim-react-rails. Any feedback is appreciated. :)
+
+[1] https://github.com/reactjs/react-rails
+[2] https://github.com/anhari/vim-react-rails
+
+================================================================================
+USAGE (2)                                                           *Usage*
+
+--------------------------------------------------------------------------------
+2.1  ReactInstall~                                                *ReactInstall*
+
+Configure your application to use the react-rails gem. Runs the following:
+
+`$ rails g react:install`
+
+--------------------------------------------------------------------------------
+2.2  ReactComponent~                                            *ReactComponent*
+
+Generate a new component file. For example, `:ReactComponent Post` will run:
+
+`$ rails g react:component Post`
+
+--------------------------------------------------------------------------------
+2.3  ReactComponentES6~                                      *ReactComponentES6*
+
+Generate a new component file using ES6. For example, `:ReactComponentES6 Post`
+will run:
+
+`$ rails g react:component Post --es6`
+
+--------------------------------------------------------------------------------
+2.4  ReactComponentCoffee~                                *ReactComponentCoffee*
+
+Generate a new component file using CoffeeScript. For example,
+`:ReactComponentCoffee Post` will run:
+
+`$ rails g react:component Post --coffee`
+
+--------------------------------------------------------------------------------
